@@ -160,7 +160,7 @@ export default function SalesPage() {
                   </span>
                   <button
                     type="button"
-                    onClick={() => navigate(`${sale.id}`)}
+                    onClick={() => navigate(`/sales-details/${sale.id}`)}
                     className="grid h-12 w-12 place-items-center rounded-2xl border border-white bg-white text-[#ff7a1a] shadow-[0_8px_16px_rgba(0,0,0,0.08)]"
                   >
                     👁
