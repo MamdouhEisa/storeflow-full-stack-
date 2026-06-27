@@ -158,14 +158,14 @@ export default function SalesPage() {
                   <span className={`rounded-full px-3 py-1 text-[14px] font-medium ${statusClass(sale.status)}`}>
                     {statusLabel(sale.status)}
                   </span>
-                 <button
-  type="button"
-  onClick={() => {
-    window.location.href = `/sales/${sale.id}`;
-  }}
->
-  👁
-</button>
+                  <button
+                  type="button"
+                  onClick={() => {
+                  console.log("Navigate to:", `/sales/${sale.id}`);
+                  navigate(`/sales/${sale.id}`); }}
+                  >
+                  👁
+                  </button>
                 </div>
               </div>
 
