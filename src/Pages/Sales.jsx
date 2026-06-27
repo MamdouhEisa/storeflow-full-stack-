@@ -77,7 +77,7 @@ export default function SalesPage() {
     if (v === "returned") return "Returned";
     return "Partially Returned";
   };
-
+  console.log("SalesPage Render");
   return (
     <div className="min-h-screen text-[#23262b]">
       <main className="mx-auto w-full max-w-[1560px] px-4 pb-14 pt-8 sm:px-8 lg:px-14">
@@ -158,13 +158,14 @@ export default function SalesPage() {
                   <span className={`rounded-full px-3 py-1 text-[14px] font-medium ${statusClass(sale.status)}`}>
                     {statusLabel(sale.status)}
                   </span>
-                  <button
-                    type="button"
-                    onClick={() => navigate(`/sales-details/${sale.id}`)}
-                    className="grid h-12 w-12 place-items-center rounded-2xl border border-white bg-white text-[#ff7a1a] shadow-[0_8px_16px_rgba(0,0,0,0.08)]"
-                  >
-                    👁
-                  </button>
+                 <button
+  type="button"
+  onClick={() => {
+    window.location.href = `/sales/${sale.id}`;
+  }}
+>
+  👁
+</button>
                 </div>
               </div>
 

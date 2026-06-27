@@ -6,6 +6,7 @@ import { fetchSaleById, returnFullSale, returnSaleItem } from "../api/sales";
 
 export default function SaleDetailsPage() {
   const { id } = useParams();
+  console.log("Invoice ID =", id);
   const navigate = useNavigate();
   const [sale, setSale] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
